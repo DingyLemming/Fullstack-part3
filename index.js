@@ -43,7 +43,7 @@ app.post('/api/persons', (req, res) => {
 
 // Delete a person
 app.delete('/api/persons/:id', (req, res) => {
-  Person.findByIdAndRemove(req.params.id)
+  Person.findByIdAndDelete(req.params.id)
     .then(() => {
       res.status(204).end();
     })
